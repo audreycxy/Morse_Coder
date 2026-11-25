@@ -7,10 +7,10 @@ Morse_Coder is an app that translates between plain text and Morse code.
 The `web/` folder holds a website version. It runs entirely in the browser, with nothing to install. Open `web/index.html` directly, or serve it:
 
 ```powershell
-python -m http.server 8765 --directory web
+python -m http.server 8000 --directory web
 ```
 
-Then visit http://localhost:8765. The site:
+Then visit http://localhost:8000. The site:
 
 - Translates live as you type, in either direction (auto-detected, or pick one).
 - Plays the Morse code as beeps, with a flashing signal lamp and each letter highlighted as it plays. Speed and pitch are adjustable.
