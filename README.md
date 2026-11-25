@@ -2,11 +2,30 @@
 
 Morse_Coder is an app that translates between plain text and Morse code.
 
-## Requirements
+## Website
+
+The `web/` folder holds a website version. It runs entirely in the browser, with nothing to install. Open `web/index.html` directly, or serve it:
+
+```powershell
+python -m http.server 8765 --directory web
+```
+
+Then visit http://localhost:8765. The site:
+
+- Translates live as you type, in either direction (auto-detected, or pick one).
+- Plays the Morse code as beeps, with a flashing signal lamp and each letter highlighted as it plays. Speed and pitch are adjustable.
+- Has a clickable reference chart: click a character to hear it and add it to your message.
+- Works on phones and follows your system's light or dark mode.
+
+Shortcuts: <kbd>Ctrl</kbd> + <kbd>Enter</kbd> plays or stops, and <kbd>Esc</kbd> stops.
+
+## Command Line
+
+### Requirements
 
 Python 3.9 or newer. There are no other dependencies.
 
-## Usage
+### Usage
 
 Pass a message and Morse_Coder works out which way to translate it:
 
@@ -48,7 +67,7 @@ text_to_morse("Hi")     # '.... ..'
 morse_to_text(".... ..")  # 'HI'
 ```
 
-## Running the Tests
+### Running the Tests
 
 ```powershell
 python -m unittest -v
@@ -121,10 +140,9 @@ Morse: ... --- ... / .... . .-.. .--.
 
 ## Possible Future Features
 
-- Play Morse code as audio beeps
-- Flash Morse code visually (light or screen blink)
-- Adjustable playback speed (words per minute)
-- Decode Morse from audio input
+- Decode Morse from audio input (microphone)
+- Tap out Morse with a key or button and have it decoded
+- Audio playback in the command-line version
 
 ## License
 
